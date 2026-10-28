@@ -46,6 +46,7 @@ namespace AdmitereLab.Controllers
         private void PregatesteListele()
         {
             ViewBag.Specialitati = new SelectList(Optiuni.Specialitati);
+            ViewBag.FormeInvatamant = Optiuni.FormeInvatamant;
         }
     }
 }

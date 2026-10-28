@@ -50,7 +50,22 @@
         <span asp-validation-for="Specialitate" class="text-danger"></span>
     </div>
 
-    @* Sarcina 3: Forma de învățământ — butoane radio; Solicit loc în cămin — casetă de bifat *@
+    <div class="mb-3">
+        <label asp-for="FormaInvatamant" class="form-label d-block"></label>
+        @foreach (string forma in ViewBag.FormeInvatamant)
+        {
+            <label class="form-check form-check-inline">
+                <input type="radio" asp-for="FormaInvatamant" value="@forma" class="form-check-input" />
+                @forma
+            </label>
+        }
+        <span asp-validation-for="FormaInvatamant" class="text-danger d-block"></span>
+    </div>
+
+    <div class="form-check mb-3">
+        <input asp-for="SolicitaCamin" class="form-check-input" />
+        <label asp-for="SolicitaCamin" class="form-check-label"></label>
+    </div>
 
     <button type="submit" class="btn btn-primary">Trimite cererea</button>
     <a asp-action="Index" class="btn btn-link">Renunță</a>
