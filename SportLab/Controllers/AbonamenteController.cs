@@ -32,7 +32,15 @@ namespace SportLab.Controllers
         [HttpPost]
         public IActionResult Adauga(Abonament abonament)
         {
-           
+            if (!abonament.AcordRegulament)
+            {
+                ModelState.AddModelError("AcordRegulament", "Bifează acordul cu regulamentul sălii.");
+            }
+
+            if (abonament.AntrenorPersonal && abonament.TipAbonament != "Trimestrial" && abonament.TipAbonament != "Anual")
+            {
+                ModelState.AddModelError("", "Antrenorul personal se oferă doar la abonamentul trimestrial sau anual.");
+            }
 
             if (!ModelState.IsValid)
             {

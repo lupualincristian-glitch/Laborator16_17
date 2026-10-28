@@ -7,8 +7,7 @@
 <p class="text-muted">Completează formularul. Câmpurile marcate în regulament sunt obligatorii.</p>
 
 <form asp-action="Adauga" method="post" class="col-lg-8">
-    @* Sarcina 2: sumarul validării *@
-
+    <div asp-validation-summary="All" class="alert alert-danger"></div>
     <div class="row">
         <div class="col-md mb-3">
             <label asp-for="NumeComplet" class="form-label"></label>

@@ -37,3 +37,7 @@ body {
 .field-validation-error { color: #dc3545; display: block; }
 .display-label { margin-top: 0.5rem; font-weight: 600; color: #495057; }
 .display-field { margin-bottom: 0.25rem; }
+
+.validation-summary-valid {
+    display: none;
+}
