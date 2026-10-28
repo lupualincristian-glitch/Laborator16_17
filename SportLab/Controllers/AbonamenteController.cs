@@ -29,16 +29,20 @@ namespace SportLab.Controllers
         }
 
         [HttpPost]
+        [HttpPost]
         public IActionResult Adauga(Abonament abonament)
         {
+           
+
             if (!ModelState.IsValid)
             {
+                PregatesteListele(); 
                 return View(abonament);
             }
+
             Baza.Adauga(abonament);
             return RedirectToAction("Index");
         }
-
         // Listele de opțiuni pentru formular.
         private void PregatesteListele()
         {
