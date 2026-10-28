@@ -1,0 +1,26 @@
+@model ContMembru
+@{
+    ViewData["Title"] = "Cont de membru";
+}
+
+<h1>Cont de membru</h1>
+<p class="text-muted">Cu contul vezi programul antrenamentelor și plățile.</p>
+
+<form asp-action="Inregistrare" method="post" class="col-lg-6">
+    <div class="mb-3">
+        <label asp-for="Email" class="form-label"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Parola" class="form-label"></label>
+        <input asp-for="Parola" class="form-control" />
+        <span asp-validation-for="Parola" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="ConfirmareParola" class="form-label"></label>
+        <input asp-for="ConfirmareParola" class="form-control" />
+        <span asp-validation-for="ConfirmareParola" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Creează contul</button>
+</form>

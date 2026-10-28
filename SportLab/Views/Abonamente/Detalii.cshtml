@@ -1,0 +1,25 @@
+@model Abonament
+@{
+    ViewData["Title"] = "Detalii";
+}
+
+<h1>@Model.NumeComplet</h1>
+
+<dl class="row">
+    <dt class="col-sm-4">@Html.DisplayName("Email")</dt>
+    <dd class="col-sm-8">@Model.Email</dd>
+    <dt class="col-sm-4">@Html.DisplayName("TipAbonament")</dt>
+    <dd class="col-sm-8">@Model.TipAbonament</dd>
+    <dt class="col-sm-4">@Html.DisplayName("Program")</dt>
+    <dd class="col-sm-8">@Model.Program</dd>
+    <dt class="col-sm-4">@Html.DisplayName("Activitati")</dt>
+    <dd class="col-sm-8">@Baza.ActivitatiCaText(Model.Activitati)</dd>
+    <dt class="col-sm-4">@Html.DisplayName("AntrenorPersonal")</dt>
+    <dd class="col-sm-8">@Html.Display("AntrenorPersonal")</dd>
+    <dt class="col-sm-4">@Html.DisplayName("Observatii")</dt>
+    <dd class="col-sm-8">@Model.Observatii</dd>
+    <dt class="col-sm-4">@Html.DisplayName("DataInscrierii")</dt>
+    <dd class="col-sm-8">@Html.Display("DataInscrierii")</dd>
+</dl>
+
+<p><a asp-action="Index">Înapoi la listă</a></p>

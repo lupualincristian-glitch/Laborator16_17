@@ -1,0 +1,28 @@
+@model List<Cerere>
+@{
+    ViewData["Title"] = "Cereri";
+}
+
+<h1>Cereri de admitere</h1>
+
+<p><a asp-action="Adauga" class="btn btn-primary">Cerere nouă</a></p>
+
+<table class="table table-striped align-middle">
+    <thead>
+        <tr>
+            <th>Numele și prenumele</th>
+            <th>E-mail</th>
+            <th>Specialitatea</th>
+            <th>Forma</th>
+            <th>Cămin</th>
+            <th>Data</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Cerere cerere in Model)
+        {
+            <partial name="_RandCerere" model="cerere" />
+        }
+    </tbody>
+</table>

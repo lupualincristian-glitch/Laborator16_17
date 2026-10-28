@@ -1,0 +1,25 @@
+@model Cerere
+@{
+    ViewData["Title"] = "Cerere nouă";
+}
+
+<h1>Cerere de admitere</h1>
+<p class="text-muted">Admiterea la colegiu, sesiunea 2027. Toate câmpurile, în afară de motivație, sunt obligatorii.</p>
+
+<form asp-action="Adauga" method="post" class="col-lg-8">
+    @* Exemplu: un câmp scris cu helpere HTML *@
+    <div class="mb-3">
+        @Html.Label("NumeComplet", null, new { @class = "form-label" })
+        @Html.TextBox("NumeComplet", null, new { @class = "form-control" })
+        @Html.ValidationMessage("NumeComplet", null, new { @class = "text-danger" })
+    </div>
+
+    @* Sarcina 1: E-mail, Telefonul, Anul absolvirii, Motivația — cu helpere HTML *@
+
+    @* Sarcina 2: Specialitatea — listă derulantă *@
+
+    @* Sarcina 3: Forma de învățământ — butoane radio; Solicit loc în cămin — casetă de bifat *@
+
+    <button type="submit" class="btn btn-primary">Trimite cererea</button>
+    <a asp-action="Index" class="btn btn-link">Renunță</a>
+</form>

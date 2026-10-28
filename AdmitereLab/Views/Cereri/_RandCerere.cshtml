@@ -1,0 +1,13 @@
+@model Cerere
+
+<tr>
+    <td>@Html.Display("NumeComplet")</td>
+    <td>@Model.Email</td>
+    <td>@Html.Display("Specialitate")</td>
+    <td>@Html.Display("FormaInvatamant")</td>
+    <td>@Html.Display("SolicitaCamin")</td>
+    <td>@Html.Display("DataDepunerii")</td>
+    <td class="text-end text-nowrap">
+        <a asp-action="Detalii" asp-route-id="@Model.Id" class="btn btn-sm btn-outline-secondary">Detalii</a>
+    </td>
+</tr>

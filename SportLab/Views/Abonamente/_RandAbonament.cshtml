@@ -1,0 +1,13 @@
+@model Abonament
+
+<tr>
+    <td>@Html.Display("NumeComplet")</td>
+    <td>@Html.Display("TipAbonament")</td>
+    <td>@Html.Display("Program")</td>
+    <td>@Baza.ActivitatiCaText(Model.Activitati)</td>
+    <td>@Html.Display("AntrenorPersonal")</td>
+    <td>@Html.Display("DataInscrierii")</td>
+    <td class="text-end">
+        <a asp-action="Detalii" asp-route-id="@Model.Id" class="btn btn-sm btn-outline-secondary">Detalii</a>
+    </td>
+</tr>

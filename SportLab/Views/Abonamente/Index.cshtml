@@ -1,0 +1,28 @@
+@model List<Abonament>
+@{
+    ViewData["Title"] = "Abonamente";
+}
+
+<h1>Abonamente</h1>
+
+<p><a asp-action="Adauga" class="btn btn-primary">Abonament nou</a></p>
+
+<table class="table table-striped align-middle">
+    <thead>
+        <tr>
+            <th>Numele și prenumele</th>
+            <th>Tipul</th>
+            <th>Programul</th>
+            <th>Activitățile</th>
+            <th>Antrenor</th>
+            <th>Data</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Abonament abonament in Model)
+        {
+            <partial name="_RandAbonament" model="abonament" />
+        }
+    </tbody>
+</table>

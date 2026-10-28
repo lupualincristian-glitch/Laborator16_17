@@ -1,0 +1,9 @@
+@model ContMembru
+@{
+    ViewData["Title"] = "Cont creat";
+}
+
+<h1>Contul a fost creat</h1>
+<p class="alert alert-success">Contul pentru <strong>@Model.Email</strong> este gata.</p>
+<p>Parola are @Model.Parola.Length caractere. Ea nu se afișează și nu se salvează în această aplicație.</p>
+<p><a asp-controller="Abonamente" asp-action="Index">Înapoi la abonamente</a></p>
