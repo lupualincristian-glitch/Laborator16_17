@@ -4,7 +4,7 @@
 
 | | |
 |---|---|
-| **Numele și prenumele** | *(scrie aici)* |
+| **Numele și prenumele** | Lupu Alin-Cristian |
 | **Grupa** | AAW2341 |
 | **Data** | 28.10.2026 |
 | **Ramura** | `lab-16` |
