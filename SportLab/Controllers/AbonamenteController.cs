@@ -41,10 +41,15 @@ namespace SportLab.Controllers
             {
                 ModelState.AddModelError("", "Antrenorul personal se oferă doar la abonamentul trimestrial sau anual.");
             }
-
+            if (abonament.Activitati == null || abonament.Activitati.Count == 0)
+            {
+                ModelState.AddModelError("Activitati", "Alege cel puțin o activitate.");
+            }
             if (!ModelState.IsValid)
             {
-                PregatesteListele(); 
+                
+                PregatesteListele();
+                
                 return View(abonament);
             }
 
@@ -56,6 +61,7 @@ namespace SportLab.Controllers
         {
             ViewBag.TipuriAbonament = new SelectList(Optiuni.TipuriAbonament);
             ViewBag.Programe = Optiuni.Programe;
+            ViewBag.Activitati = new SelectList(Optiuni.Activitati);
         }
     }
 }

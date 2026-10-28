@@ -38,7 +38,12 @@
         }
         <span asp-validation-for="Program" class="text-danger d-block"></span>
     </div>
-    @* Sarcina 3: Activitățile — listă cu selecție multiplă *@
+    <div class="mb-3">
+        <label asp-for="Activitati" class="form-label"></label>
+        <select asp-for="Activitati" asp-items="ViewBag.Activitati" class="form-select" size="5"></select>
+        <div class="form-text">Ține apăsat Ctrl ca să alegi mai multe.</div>
+        <span asp-validation-for="Activitati" class="text-danger"></span>
+    </div>
     <div class="form-check mb-2">
         <input asp-for="AntrenorPersonal" class="form-check-input" />
         <label asp-for="AntrenorPersonal" class="form-check-label"></label>
