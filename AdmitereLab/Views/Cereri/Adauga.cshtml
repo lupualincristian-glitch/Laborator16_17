@@ -14,7 +14,33 @@
         @Html.ValidationMessage("NumeComplet", null, new { @class = "text-danger" })
     </div>
 
-    @* Sarcina 1: E-mail, Telefonul, Anul absolvirii, Motivația — cu helpere HTML *@
+    <!-- E-mail -->
+    <div class="mb-3">
+        @Html.Label("Email", null, new { @class = "form-label" })
+        @Html.TextBox("Email", null, new { @class = "form-control" })
+        @Html.ValidationMessage("Email", null, new { @class = "text-danger" })
+    </div>
+
+    <!-- Telefon -->
+    <div class="mb-3">
+        @Html.Label("Telefon", null, new { @class = "form-label" })
+        @Html.TextBox("Telefon", null, new { @class = "form-control" })
+        @Html.ValidationMessage("Telefon", null, new { @class = "text-danger" })
+    </div>
+
+    <!-- Anul absolvirii (folosind helpere tipizate ...For) -->
+    <div class="mb-3">
+        @Html.LabelFor(m => m.AnulAbsolvirii, new { @class = "form-label" })
+        @Html.TextBoxFor(m => m.AnulAbsolvirii, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.AnulAbsolvirii, null, new { @class = "text-danger" })
+    </div>
+
+    <!-- Motivația (zona de text: 4 rânduri, 60 coloane) -->
+    <div class="mb-3">
+        @Html.Label("Motivatie", null, new { @class = "form-label" })
+        @Html.TextArea("Motivatie", null, 4, 60, new { @class = "form-control" })
+        @Html.ValidationMessage("Motivatie", null, new { @class = "text-danger" })
+    </div>
 
     @* Sarcina 2: Specialitatea — listă derulantă *@
 
