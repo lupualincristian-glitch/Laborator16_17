@@ -42,7 +42,13 @@
         @Html.ValidationMessage("Motivatie", null, new { @class = "text-danger" })
     </div>
 
-    @* Sarcina 2: Specialitatea — listă derulantă *@
+    <div class="mb-3">
+        <label asp-for="Specialitate" class="form-label"></label>
+        <select asp-for="Specialitate" asp-items="ViewBag.Specialitati" class="form-select">
+            <option value="">— alege specialitatea —</option>
+        </select>
+        <span asp-validation-for="Specialitate" class="text-danger"></span>
+    </div>
 
     @* Sarcina 3: Forma de învățământ — butoane radio; Solicit loc în cămin — casetă de bifat *@
 
