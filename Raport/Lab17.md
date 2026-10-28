@@ -4,7 +4,7 @@
 
 | | |
 |---|---|
-| **Numele și prenumele** | *(scrie aici)* |
+| **Numele și prenumele** | Lupu Alin-Cristian |
 | **Grupa** | AAW2341 |
 | **Data** | 28.10.2026 |
 | **Ramura** | `lab-17` |
@@ -31,27 +31,27 @@
 
 ### 1. Pagina de eroare, înainte de reparare (Sarcina 1)
 
-![Captura 1](capturi/lab17-1.png)
+![Captura 1](Capturi/lab17-1.png)
 
 ### 2. Formularul revenit corect (Sarcina 1)
 
-![Captura 2](capturi/lab17-2.png)
+![Captura 2](Capturi/lab17-2.png)
 
 ### 3. Sumarul validării cu regulile din acțiune (Sarcina 2)
 
-![Captura 3](capturi/lab17-3.png)
+![Captura 3](Capturi/lab17-3.png)
 
 ### 4. Lista cu activitățile alese (Sarcina 3)
 
-![Captura 4](capturi/lab17-4.png)
+![Captura 4](Capturi/lab17-4.png)
 
 ### 5. Parolele care nu coincid (Sarcina 4)
 
-![Captura 5](capturi/lab17-5.png)
+![Captura 5](Capturi/lab17-5.png)
 
 ### 6. Contul creat (Sarcina 4)
 
-![Captura 6](capturi/lab17-6.png)
+![Captura 6](Capturi/lab17-6.png)
 
 ## Commit-urile
 
